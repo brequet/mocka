@@ -1,0 +1,20 @@
+[package]
+name = "mocka"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.8.1"
+clap = { version = "4.5.23", features = ["derive"] }
+log = "0.4.22"
+mime_guess = "2.0.5"
+notify = "7.0.0"
+pretty_env_logger = "0.5.0"
+serde = { version = "1.0.217", features = ["derive"] }
+serde_json = "1.0.134"
+thiserror = "2.0.9"
+tokio = { version = "1.42.0", features = ["full"] }
+tower-http = { version = "0.6.2", features = ["trace"] }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
+warp = "0.3.7"
