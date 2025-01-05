@@ -11,15 +11,15 @@ use serde_json::json;
 use tokio::fs;
 use tower_http::trace::TraceLayer;
 
-use crate::{config::Config, error::MockaError};
+use crate::{config::ServeConfig, error::MockaError};
 use tracing::{info, warn};
 
 pub struct Server {
-    config: Arc<Config>,
+    config: Arc<ServeConfig>,
 }
 
 impl Server {
-    pub fn new(config: Config) -> Self {
+    pub fn new(config: ServeConfig) -> Self {
         Server {
             config: Arc::new(config),
         }
@@ -50,7 +50,7 @@ impl Server {
 
     async fn handle_request(
         Path(path): Path<String>,
-        State(state): State<Arc<Config>>,
+        State(state): State<Arc<ServeConfig>>,
     ) -> Response {
         info!("Handling request for path: {}", path);
 

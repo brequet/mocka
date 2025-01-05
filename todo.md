@@ -1,0 +1,7 @@
+- [ ] Handle root path '/' like any directory
+- [ ] Log example to curl directory when serving
+- [ ] Add a fetch command to locally copy an API path
+  - [ ] Basic feature
+  - [ ] Add headers to request
+  - [ ] Add auth to request
+- [ ] 
